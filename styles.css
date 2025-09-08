@@ -1,0 +1,69 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+  background: #f4f4f9;
+}
+
+/* 🎨 Part 1: Button Hover with Transition */
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+  background: #3700b3;
+  transform: scale(1.1);
+}
+
+/* 🎨 Part 1: CSS Animation (Box) */
+.box {
+  width: 100px;
+  height: 100px;
+  background: coral;
+  margin: 30px auto;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+/* Keyframes for box animation */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+}
+
+.box.animate {
+  animation: bounce 1s ease-in-out;
+}
+
+/* 🎬 Part 3: Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  animation: fadeIn 0.6s ease;
+}
+
+/* Modal Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-50px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
